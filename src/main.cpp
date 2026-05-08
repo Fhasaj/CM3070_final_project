@@ -2,6 +2,7 @@
 #include <iostream>
 
 //Basic install and functional test from https://www.geeksforgeeks.org/installation-guide/how-to-install-opencv-in-c-on-linux/
+//& https://docs.opencv.org/4.x/db/df5/tutorial_linux_gcc_cmake.html
 
 
 //TODO: REMOVE THIS AS IT CAN CAUSE ISSUES WHEN I HAVE THOUSANDS LINES OF CODE.
@@ -15,9 +16,10 @@ int main(int argc, char** argv) {
         cout << "Usage: DisplayImage.out <Image_Path>" << endl;
     }
 
-    //Variable to store an image.
+    //Creates a OpenCV matrix called image in which we can use for said image.
     Mat image;
-    //This then is used to read that image into memory
+
+    //This matrix is then used with imread toi read the imaged passed to it in the argument when running the program
     image = imread(argv[1], 1);
 
     //If statement to check incase there is no image passed
