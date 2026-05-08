@@ -25,7 +25,7 @@ laptop CPU, Raspberry Pi 5, or Jetson Nano — without requiring a discrete GPU.
 
 ```
 ┌──────────────┐   ┌──────────────────┐   ┌──────────────────┐   ┌─────────────┐
-│  Video in    │ → │   Detection       │ → │    Tracking      │ → │  Counting   │
+│  Video in    │ → │   Detection      │ → │    Tracking      │ → │  Counting   │
 │ (file/cam)   │   │ YOLOv8 via       │   │ SORT (Kalman +   │   │ Virtual-    │
 │              │   │ OpenCV DNN / C++ │   │ Hungarian algo)  │   │ line cross  │
 └──────────────┘   └──────────────────┘   └──────────────────┘   └─────────────┘
