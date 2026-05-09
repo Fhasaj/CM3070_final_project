@@ -1,0 +1,342 @@
+# =============================================================================
+# .gitignore for Vehicle Tracker
+# Covers: CLion, VSCode, Visual Studio, CMake, C++, Python scripts
+# =============================================================================
+
+
+# =============================================================================
+# BUILD OUTPUT
+# =============================================================================
+
+build/
+build-*/
+cmake-build-*/
+cmake-build-debug/
+cmake-build-release/
+cmake-build-relwithdebinfo/
+cmake-build-minsizerel/
+out/
+bin/
+lib/
+
+# Compiled object files
+*.o
+*.obj
+*.lo
+*.slo
+*.la
+*.a
+*.lib
+
+# Shared libraries
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# Executables
+*.exe
+*.out
+*.app
+vehicle_tracker
+vehicle_tracker.exe
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+CMakeTmp/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+_deps/
+compile_commands.json
+
+
+# =============================================================================
+# CLION
+# =============================================================================
+
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# CLion local history and workspace
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionaries/
+.idea/shelf/
+.idea/aws.xml
+.idea/httpRequests/
+.idea/dataSources/
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/gradle.xml
+.idea/caches/
+.idea/modules.xml
+
+
+# =============================================================================
+# VSCODE
+# =============================================================================
+
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+
+# Commonly generated VSCode files to always ignore
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/c_cpp_properties.json
+.vscode/settings.json
+.vscode/*.code-snippets
+.vscode/ipynb_checkpoints/
+
+# VSCode local history plugin
+.history/
+*.vsidx
+
+
+# =============================================================================
+# VISUAL STUDIO
+# =============================================================================
+
+# User-specific files
+*.user
+*.userosscache
+*.sln.docview
+
+# User-specific build files
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+*.VC.VC.opendb
+
+# Visual Studio solution and project generated files
+*.rsuser
+*.pidb
+*.sbr
+*.log
+
+# Visual Studio cache / options directory
+.vs/
+Generated\ Files/
+
+# MSBuild cache
+*.tlog
+*.lastbuildstate
+
+# Publish Web Output
+*.[Pp]ublish.xml
+*.azurePubxml
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+!**/packages/repositories.config
+*.nuget.props
+*.nuget.targets
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Recycle Bin
+$RECYCLE.BIN/
+
+# Windows installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+
+# =============================================================================
+# DATA — large files never go in git
+# =============================================================================
+
+# YOLO model weights (downloaded by scripts/download_model.sh)
+data/models/
+*.onnx
+*.pt
+*.weights
+*.cfg
+
+# UA-DETRAC benchmark dataset (too large for git)
+data/ua-detrac/
+
+# Any other large video or image datasets
+data/datasets/
+
+# Output videos and logs from running the tracker
+*.avi
+*.mp4
+*.mkv
+*.mov
+results/
+out/
+
+# CSV / JSON output logs (generated at runtime)
+counts.csv
+*.log.csv
+
+# Keep the samples folder and its placeholder
+!data/samples/
+!data/samples/.gitkeep
+!data/samples/*.mp4
+
+
+# =============================================================================
+# PYTHON (evaluation scripts)
+# =============================================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+eggs/
+.eggs/
+wheels/
+*.whl
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+.python-version
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+*.ipynb
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+
+
+# =============================================================================
+# MACOS
+# =============================================================================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.DocumentRevisions-V100
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network\ Trash\ Folder
+Temporary\ Items
+
+
+# =============================================================================
+# LINUX
+# =============================================================================
+
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+
+# =============================================================================
+# MISC / EDITOR LEFTOVERS
+# =============================================================================
+
+# Vim
+*.swp
+*.swo
+*.swn
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+Session.vim
+.netrwhist
+tags
+
+# Emacs
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# Backup files
+*.bak
+*.backup
+*.orig
+*.tmp
+*.temp
+
+# Patch files
+*.patch
+*.diff
+
+# Compressed archives (don't accidentally commit datasets)
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+
+# =============================================================================
+# WHAT IS INTENTIONALLY TRACKED
+# =============================================================================
+# CMakeLists.txt                ✓ build definition
+# src/                          ✓ all source files
+# include/                      ✓ all headers
+# tests/                        ✓ unit tests
+# scripts/download_model.sh     ✓ model download helper
+# scripts/evaluate.py           ✓ evaluation harness
+# data/samples/                 ✓ small test clips (< 50 MB each)
+# data/README.md                ✓ dataset setup instructions
+# README.md                     ✓ project overview
+# INSTALL.md                    ✓ build instructions
+# EVALUATION.md                 ✓ reproducing results
+# LICENSE                       ✓ MIT licence
+# .gitignore                    ✓ this file

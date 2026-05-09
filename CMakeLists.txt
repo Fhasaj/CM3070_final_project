@@ -19,5 +19,7 @@ add_executable(vehicle_tracker src/main.cpp
         include/io.h
         tests/test_tracker.cpp
         tests/test_counter.cpp
-        tests/test_detector.cpp)
+        tests/test_detector.cpp
+        src/main.cpp)
 target_link_libraries(vehicle_tracker ${OpenCV_LIBS})
+
